@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>成都理工大学暴雨洪水管理模型（SWMM）应用研究 | blog | my blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="swmm,学习">
+    <meta name="description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;伴随着城市化的发展，城市化水平的不断提高，城市的用地规模正在不断的扩大。道路，广场等多采用透水率较低的硬质材料，取代了原有的土壤，湿地等透水率较高的基质。导致了城区下垫面的不透水比例上升，带来了诸如自然水质不断变差、旱涝灾害频率增加、内涝问题加重等问题。我国传统的雨水工程规划以“硬排水”模式为主，较为落后。伴随着“海绵城市”理念的提出，城市雨水">
+<meta name="keywords" content="swmm,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="成都理工大学暴雨洪水管理模型（SWMM）应用研究">
+<meta property="og:url" content="https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;伴随着城市化的发展，城市化水平的不断提高，城市的用地规模正在不断的扩大。道路，广场等多采用透水率较低的硬质材料，取代了原有的土壤，湿地等透水率较高的基质。导致了城区下垫面的不透水比例上升，带来了诸如自然水质不断变差、旱涝灾害频率增加、内涝问题加重等问题。我国传统的雨水工程规划以“硬排水”模式为主，较为落后。伴随着“海绵城市”理念的提出，城市雨水">
+<meta property="og:updated_time" content="2017-05-28T08:29:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="成都理工大学暴雨洪水管理模型（SWMM）应用研究">
+<meta name="twitter:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;伴随着城市化的发展，城市化水平的不断提高，城市的用地规模正在不断的扩大。道路，广场等多采用透水率较低的硬质材料，取代了原有的土壤，湿地等透水率较高的基质。导致了城区下垫面的不透水比例上升，带来了诸如自然水质不断变差、旱涝灾害频率增加、内涝问题加重等问题。我国传统的雨水工程规划以“硬排水”模式为主，较为落后。伴随着“海绵城市”理念的提出，城市雨水">
+    
+        <link rel="alternate" type="application/atom+xml" title="blog" href="/blog/atom.xml">
+    
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="/blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/blog/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wcnvidia</h5>
+          <a href="mailto:158677136@qq.com" title="158677136@qq.com" class="mail">158677136@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://www.zhihu.com/people/zhang-gao-qiu-48/activities" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                知乎
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">成都理工大学暴雨洪水管理模型（SWMM）应用研究</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">成都理工大学暴雨洪水管理模型（SWMM）应用研究</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-28T08:04:56.000Z" itemprop="datePublished" class="page-time">
+  2017-05-28
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第1章绪论"><span class="post-toc-number">1.</span> <span class="post-toc-text">第1章绪论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-1-研究背景"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 研究背景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-1-城市化的问题"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.1.1 城市化的问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-2-传统暴雨洪水管理的不足"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.1.2 传统暴雨洪水管理的不足</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-3-海绵城市的提出"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">1.1.3 海绵城市的提出</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-成都理工大学暴雨洪水管理模型（SWMM）应用研究"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">成都理工大学暴雨洪水管理模型（SWMM）应用研究</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-28 16:04:56" datetime="2017-05-28T08:04:56.000Z"  itemprop="datePublished">2017-05-28</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>&#160; &#160; &#160; &#160;伴随着城市化的发展，城市化水平的不断提高，城市的用地规模正在不断的扩大。道路，广场等多采用透水率较低的硬质材料，取代了原有的土壤，湿地等透水率较高的基质。导致了城区下垫面的不透水比例上升，带来了诸如自然水质不断变差、旱涝灾害频率增加、内涝问题加重等问题。我国传统的雨水工程规划以“硬排水”模式为主，较为落后。伴随着“海绵城市”理念的提出，城市雨水管理理念得到更新。<br> &#160; &#160; &#160; &#160;本文对SWMM（暴雨洪水管理模型）做了简介，并针对EPA SWMM软件介绍了软件版本迭代，基本模块功能以及建模步骤。并以成都理工大学作为研究区域，利用ArcGIS的basin功能对成都理工大学进行了子汇水区划分，根据理工大学规划图件模拟了排水管道，依照成都市暴雨公式结合芝加哥降雨过程线模拟了重现期2年，5年，10年，20年的为期1小时的降雨过程，进行了SWMM建模。<br>&#160; &#160; &#160; &#160;通过对SWMM建模结果分析，针对高负载区域设立了LID单元，模拟结果表明增加LID控制单元能够有效的减少排水系统的负荷，同时应积极设置LID单元，增加管径，以减少高强度降雨带来的危害。<br><a id="more"></a></p>
+<h1 id="第1章绪论"><a href="#第1章绪论" class="headerlink" title="第1章绪论"></a>第1章绪论</h1><h2 id="1-1-研究背景"><a href="#1-1-研究背景" class="headerlink" title="1.1 研究背景"></a>1.1 研究背景</h2><h3 id="1-1-1-城市化的问题"><a href="#1-1-1-城市化的问题" class="headerlink" title="1.1.1 城市化的问题"></a>1.1.1 城市化的问题</h3><p>&#160; &#160; &#160; &#160;伴随着城市的发展，城市用地规模的扩大，自然环境与人类建设发展之间的矛盾逐渐加剧，生态环境和地表景观发生了非常显著的变化。其中，反应到城市中就是城区下垫面的不透水比例明显上升。这显著的改变了城区水文条件，这导致了城市暴雨洪水管理中出现的诸多问题。如自然水质不断变差、旱涝灾害频率增加、内涝问题加重等。<br>&#160; &#160; &#160; &#160;城市下垫面与城市水文条件息息相关，城市下垫面透水率越高，雨水就越能渗入地下水，而非直接进入排水管道。当城市处于未充分开发阶段时，城市中透水率较高的林地、湿地、耕地等等比例较高，这时大气降水渗透入地下水的比例会较大，降水造成的地表径流量就会相对较小。但当城市化的进程逐步加快，城市里中的土地被征用，以前的林地、湿地、耕地等等就变成了道路、建筑。这些硬化的道路，建筑的透水率远远无法和林地、湿地、耕地等土地相比。</p>
+<blockquote>
+<p>这就导致大气降水转化为地表径流量大幅上升，洪涝灾害的频率和强度也相应增加。(Pandit et al.,1996; Whitfordaetal.,2001; Pauleitetal., 2005）[1]。<br>因此，自2000年以来，我国平均每年发生200多起不同程度的城市内涝灾害，北京、成都、武汉等大城市成了城市内涝的重灾区[33]。</p>
+</blockquote>
+<p>&#160; &#160; &#160; &#160;除内涝问题之外，城市化的进程还改变了城市的物质迁移生态过程,使得城市非点源污染负荷量的剧增(Makepeace et al.,1995; Line and White, 2007),导致河流水质和生态功能退化(Novotny V and Olem V,1994; Corwin et al.,1997)。</p>
+<blockquote>
+<p>来自我国环境保护部2003年的数据表明,我国流经城市的河段90%受到了严重污染,75%的湖泊出现了富营养化[41]。</p>
+</blockquote>
+<p>&#160; &#160; &#160; &#160;并且随着地表水源被污染，人们为了满足生活、生产用水的需要，将目光投向了地下水。但因为透水率较低的下垫面阻碍了雨水的渗透，导致地下水的补给不足。</p>
+<blockquote>
+<p>这样就陷入了—城市建设污染地表水—开发地下水供给城市建设—城市建设阻碍地表水下渗，导致地下水位下降的恶性循环之中。这便导致了诸如“地下漏斗”等的一系列环境负效应[3]。</p>
+</blockquote>
+<h3 id="1-1-2-传统暴雨洪水管理的不足"><a href="#1-1-2-传统暴雨洪水管理的不足" class="headerlink" title="1.1.2 传统暴雨洪水管理的不足"></a>1.1.2 传统暴雨洪水管理的不足</h3><blockquote>
+<p>我国传统的暴雨洪水管理依赖于防洪规划和排水（雨水）工程规划[4]。而城市防洪规划和排水(雨水)工程规划应对暴雨的指导思想均是传统的“以排为主”的雨洪管理理念,采取管网工程(灰色基础设施)“硬排水”模式[5] ,将雨水几乎全部通过城市雨水管网系统收集、排放至受纳水体,较少考虑雨洪调蓄、水质保护、资源化利用等措施和技术[6]。</p>
+</blockquote>
+<p> &#160; &#160; &#160; &#160;这种规划没有考虑自然生态系统对于暴雨洪水管理的应用，仅仅靠人工排水工程排水。因此，伴随着城市化带来的城市下垫面渗水能力变差，暴雨净流量的增加，排水管网系统备受考验。而在我国受限于历史条件等原因，管网设计不合理，建造规格较低。这些管网严重过载的情况就导致了城市出现比较严重的内涝情况。而且此时未经处理过的雨水直接进入城市管网系统极易造成水体污染，招致水质型缺水情况的发生。</p>
+<h3 id="1-1-3-海绵城市的提出"><a href="#1-1-3-海绵城市的提出" class="headerlink" title="1.1.3 海绵城市的提出"></a>1.1.3 海绵城市的提出</h3><p>&#160; &#160; &#160; &#160;海绵在人们日常生活中应用广泛，但其最令人印象深刻的特性就是其出色的吸水和储水能力。而海绵城市正是这样像海绵一样具有出色的储存水资源和释放水资源的能力。它可以比较好的适应自然条件的变化，挺高面对自然灾害的能力。海绵城市在下雨时可以吸收容纳水，在缺水时释放储存的水资源。</p>
+<blockquote>
+<p>海绵城市将自然环境和人为措施相结合起来，可以在最大限度地保证城市排水能力和水涝安全的前提下，对城市雨水渗透净化，促进雨水资源的利用率并且可以良性的循环利用水资源[34]。</p>
+</blockquote>
+<p>既能够解决严重涝灾所引起的城市管网瞬时过载问题;又能够有效提高雨水资源的利用率和缓解因缺乏水资源导致的城市缺水问题。<br>&#160; &#160; &#160; &#160;通过比较海绵城市和传统处理雨水模式，可以看到二者的差异是显而易见的。传统的城市建设模式主要依靠管道，抽水站等设备排水。主要的规划设计理念是“排水”和“束水”。这种传统的管理模式没有考虑到自然环境在城市排水系统中的巨大作用。所以往往每一次下雨，就出来内涝现象，而且费力的修建雨水管道也不见特别好的成效。 而“海绵城市”正是针对传统城市雨水处理模式所造成的水资源流失，排水系统瞬时过载，涝灾，旱灾和洪水频发等问题提出的新型暴雨洪水管理模式。</p>
+<blockquote>
+<p>海绵城市以“缓释”和“源头分散”为主要规划设计理念，尽可能的利用草地，雨水花园，下沉绿地等“绿色”措施，降伏滞留在地表的降水。</p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-28T08:29:38.000Z" itemprop="dateUpdated">2017-05-28 16:29:38</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="https://wcnvidia.github.io/blog">
+            <img src="/blog/img/avatar.jpg" alt="wcnvidia">
+            wcnvidia
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/swmm/">swmm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/学习/">学习</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/&title=《成都理工大学暴雨洪水管理模型（SWMM）应用研究》 — blog&pic=https://wcnvidia.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/&title=《成都理工大学暴雨洪水管理模型（SWMM）应用研究》 — blog&source=&#160; &#160; &#160; &#160;伴随着城市化的发展，城市化水平的不断提高，城市的用地规模正在不断的扩大。道路，广场等多采用透水率较低..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《成都理工大学暴雨洪水管理模型（SWMM）应用研究》 — blog&url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/&via=https://wcnvidia.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2017/05/28/hello-world/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2134984"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/blog/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/blog/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>wcnvidia &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/&title=《成都理工大学暴雨洪水管理模型（SWMM）应用研究》 — blog&pic=https://wcnvidia.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/&title=《成都理工大学暴雨洪水管理模型（SWMM）应用研究》 — blog&source=&#160; &#160; &#160; &#160;伴随着城市化的发展，城市化水平的不断提高，城市的用地规模正在不断的扩大。道路，广场等多采用透水率较低..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《成都理工大学暴雨洪水管理模型（SWMM）应用研究》 — blog&url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/&via=https://wcnvidia.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wcnvidia.github.io/blog/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD+0lEQVR42u3aO27kMBAFQN//0t7UgFfSe92UMUEpGsgyRdYEPf35+oqv7x/Xzzu/n7n/398rXF33K9+vdr+fAxcOHDhw4IiPmmz96s79dhOgnPX3k/lu79+OAwcOHDhOcVy9/v5leTDbbDfhmwVdHDhw4MDxaRzJX5N33b+x3U+yGg4cOHDg+DSOJIi2wTgvJrb0OHDgwIHj7zmS4uCsCJinbZsCYl7cPFYrxYEDBw4ck6hXBN1P/vzKfAcOHDhw4AiSpXa4oR1cmAXatg02u3DgwIEDx54jD0h5QjVrOOWIZ4ctcODAgQPHGxybDc0GC5JNbJpPLeix7wcHDhw4cMRbzO+3KG2ozhGHIxo4cODAgWPB0Q4TtKXABCI50maHeYESBw4cOHDsOWZDDHlilofMfLU9dw2BAwcOHDhKjk1ytR84mKWR+2LlQ3EQBw4cOHCMOGYbaocGZuW/WcMpL2g+THbgwIEDB44RR1t6m3X/8/QpH6FoBymGvztw4MCBA0fJsQmTeXlu36xKdtV+SThw4MCB4z2OtmyX/1ee+NU9scXXeZlS4sCBAweONUceGttW0GaIbfZMjvtwLhw4cODAseaYtf/bZk/yxqQQeTalxIEDBw4cZznalOnUcMNs9KH9XKdzOHDgwIFjzdEeOF9iNhi3D8YHmk84cODAgeOFPn6eMrXPtClZW7KcBebLthMOHDhw4BhxtEW0+wJiu91TQ3L5rupfGThw4MCBY1Gpy7cyC7Sz9dsm06YEiQMHDhw4NhybobTv4No3n5J0K9/Jw9eDAwcOHDgOcSSHqSfvgjJc/t68aZS3uC4DLQ4cOHDgWHAkKVA7jpAH3RwiD7d5ufChC4cDBw4cOBYceYmwHRc41SJ6oxpaJJk4cODAgWPEsQ9sm8GCWTDeNKui/hsOHDhw4BidIg+rs0RrP5SQU85QcODAgQPHKY7ZcEBedNskWm0i19657MLhwIEDB441x2yh9k6C0q6QPx89iQMHDhw4DnG0idAsEM6g9+sXBUccOHDgwHGI476UlrwmT/nahtC+yJg3rnDgwIEDxymOPK2abaItO+YrbM7y8LsDBw4cOHAsqm3JC/alt7xQuHm+TeH+8y4cOHDgwLHgmAW8zQDBLCTPUrLkyag4iAMHDhw4Yo5NGJsdNW8jzQqI+XzCCgUHDhw4cNxy5IW5JN3KN31qYOKeO0/tcODAgQPHWY78kHnRsC3b5cMW++tyNRw4cODA8eccm1DXlgLz1do9XO4cBw4cOHB8DMd+6C0pQSYly7bVFM0P4sCBAweOkiM/QAKXBLZZ+W+WNBbnwoEDBw4ca462lDYr881C7Az67RPhwIEDB46LXf0DjgLila9qOPoAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/blog/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '有时天真';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '蝠鲼的南中国海';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
