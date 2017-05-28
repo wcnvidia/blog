@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://wcnvidia.github.io/blog/"/>
-  <updated>2017-05-28T08:29:38.000Z</updated>
+  <updated>2017-05-28T12:03:06.000Z</updated>
   <id>https://wcnvidia.github.io/blog/</id>
   
   <author>
@@ -14,6 +14,465 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机箱杂谈（二）：论结构（二）</title>
+    <link href="https://wcnvidia.github.io/blog/2017/05/28/%E6%9C%BA%E7%AE%B1%E6%9D%82%E8%B0%88%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E8%AE%BA%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://wcnvidia.github.io/blog/2017/05/28/机箱杂谈（二）：论结构（二）/</id>
+    <published>2017-05-28T11:38:45.000Z</published>
+    <updated>2017-05-28T12:03:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="主板？机箱？"><a href="#主板？机箱？" class="headerlink" title="主板？机箱？"></a>主板？机箱？</h1><p>要讲塔的概念，就要先从主板尺寸讲起。在1995年，Intel颁布了ATX( Advanced Technology Extended)标准来规范主板设计，在这个标准之下衍生出了ATX、Micro-ATX、Mini-ITX、Extended-ATX、HPTX、XL-ATX等等主板尺寸。在这里主要介绍常见的ATX、MATX、ITX、E-ATX（E-ATX其实已经比较不常见了。）版型。<br><a id="more"></a></p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-d2dd7662fab506eb65e6c88131f8f374_b.png" alt="微星Z270 XPOWER GAMING TITANIUM" title="">
+                </div>
+                <div class="image-caption">微星Z270 XPOWER GAMING TITANIUM</div>
+            </figure> 
+</blockquote>
+<p>图为微星Z270 XPOWER GAMING TITANIUM，标准ATX版型（30.5cmx24.4cm<br>）。在小型化的浪潮没有到来之前，至少90%的个人台式电脑都是用的这种版型。现在下至300、400元的低阶主板，上至3000、4000元的高阶主板都大量采用这种版型。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-a3dc858e1aecb447ec5405ac664c35f5_b.jpg" alt="技嘉GA-Z270MX-Gaming5" title="">
+                </div>
+                <div class="image-caption">技嘉GA-Z270MX-Gaming5</div>
+            </figure> 
+</blockquote>
+<p>图为技嘉GA-Z270MX-Gaming5，标准Micro-ATX版型（24.4cmx24.4cm），相比ATX版型最大的区别就是削减了PCI插槽的数量。以图中的主板为例，如果此时插上两张双槽显卡（双槽显卡最为普遍）进行交火/SLI将会占据4个PCI插槽位，就无法再插入PCI声卡等拓展设备了。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-ed86cb79f19696d73b10a8fc90452f3f_b.jpg" alt="技嘉GA-B250M-D3V" title="">
+                </div>
+                <div class="image-caption">技嘉GA-B250M-D3V</div>
+            </figure> 
+</blockquote>
+<p>图为技嘉GA-B250M-D3V，尺寸为24.4cmx17.4cm，非典型MATX版型。这种非典型MATX主板大量存在于低阶，中低阶产品之中。这种非典型MATX主板的尺寸有好几种，基本上长边都会保持在24.4CM但短边会小于24.4CM，而且有的缩减了内存插槽数量，有的没有缩减。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-9be39629efe21b826260f1d55baf80d8_b.jpg" alt="华硕MAXIMUS VIII IMPACT" title="">
+                </div>
+                <div class="image-caption">华硕MAXIMUS VIII IMPACT</div>
+            </figure> 
+</blockquote>
+<p>图为华硕MAXIMUS VIII IMPACT，标准ITX主板（17cmx17cm），相比ATX和MATX，ITX主板将内存插槽缩减为两根，PCI插槽仅剩一根。挑选ITX主板最应该注意CPU插槽的位置，要尽可能的离PCI显卡远一点，否则很可能散热器会遮挡PCI插槽导致显卡无法安装。另外选择散热器也要注意散热器风扇会遮挡内存插槽的问题。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-a9cfe8ff6af8ba186a3bc70a080e618e_b.jpg" alt="华硕MAXIMUS VIII EXTREME/ASSEMBLY" title="">
+                </div>
+                <div class="image-caption">华硕MAXIMUS VIII EXTREME/ASSEMBLY</div>
+            </figure> 
+</blockquote>
+<p>图为华硕MAXIMUS VIII EXTREME/ASSEMBLY，尺寸为30.5cmx27.2cm，EATX版型。一般来讲EATX结构会让IO接口边保持30.5cm，另一边则extend出几cm。这种主板在桌面级一般要最高阶才提供。有的中塔机箱能装，有的中塔机箱不能安装。</p>
+<h1 id="全塔？中塔？"><a href="#全塔？中塔？" class="headerlink" title="全塔？中塔？"></a>全塔？中塔？</h1><p>关于版型的概念，虽然基础，但却十分重要。主板的版型像建筑工业领域中的模数一样影响着机箱内部结构的设计。但什么版型对应什么塔却没有本质的关系。事实上厂商们并没有完整又严谨的全塔，中塔定义。而在网络上，大致有如下几个观点来分辨全塔、中塔。</p>
+<ol>
+<li>全塔可以搭载E-ATX主板，中塔就不行。</li>
+<li>全塔拥有xx个5.25光驱位。</li>
+<li>全塔拥有xx个3.5硬盘位。</li>
+<li>全塔机箱可以安装两个电源，或者全塔机箱内部除主板外应留出两个电源的高度。</li>
+</ol>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-b3c3c60f11727881b0fcf582c10c471b_b.jpg" alt="海盗船Air540" title="">
+                </div>
+                <div class="image-caption">海盗船Air540</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-85d3862b1ccb746fc2faab9c3b6a6bd3_b.jpg" alt="海盗船Air540规格表" title="">
+                </div>
+                <div class="image-caption">海盗船Air540规格表</div>
+            </figure>
+</blockquote>
+<p>图为海盗船Air540，可以看到海盗船官方认定Air540为中塔机箱，并且也支持EATX主板。所以支持EATX与否不能作为分辨全塔、半塔的理由。（当然大多数中塔机箱还是不支持EATX主板的。）</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-42fa4958b48f54c46558fe72de17f104_b.jpg" alt="迎广509" title="">
+                </div>
+                <div class="image-caption">迎广509</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-466977eb2a96abedcc76ff6f96174819_b.jpg" alt="迎广509规格表" title="">
+                </div>
+                <div class="image-caption">迎广509规格表</div>
+            </figure>
+</blockquote>
+<p>图为迎广509，身为全塔机箱的它仅仅有1个5.25位。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-66794eff3c3fc26f2921d84a9ca5feb5_b.jpg" alt="追风者ENTHOO PRO M" title="">
+                </div>
+                <div class="image-caption">追风者ENTHOO PRO M</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-c3a6db077e198626f01ca2a69c9cc76b_b.jpg" alt="追风者ENTHOO PRO M规格表" title="">
+                </div>
+                <div class="image-caption">追风者ENTHOO PRO M规格表</div>
+            </figure>
+</blockquote>
+<p>图为追风者ENTHOO PRO M，作为中塔机箱他有6+2个3.5位。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-22ee48ebccd408b8dfdd4ede2c24581b_b.jpg" alt="海盗船600Q" title="">
+                </div>
+                <div class="image-caption">海盗船600Q</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-921f5b8533bccb407fc3e65fb459c8be_b.jpg" alt="海盗船600Q" title="">
+                </div>
+                <div class="image-caption">海盗船600Q</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-467c9e1ccc21561ef0dbc5c4e1ce39c3_b.jpg" alt="海盗船600Q规格表" title="">
+                </div>
+                <div class="image-caption">海盗船600Q规格表</div>
+            </figure>
+</blockquote>
+<p>图为海盗船600Q，虽然内部空间充裕，但也没留够2个电源的高度。</p>
+<p>所以全塔、中塔仅仅是一个概念，没有严格定义，每个厂家理解都不同。这个概念更像是厂家为了区分产品定位所故意营造的，也绝非是全塔一定就比中塔大，一切要具体问题具体分析。</p>
+<h1 id="双腔与异形结构"><a href="#双腔与异形结构" class="headerlink" title="双腔与异形结构"></a>双腔与异形结构</h1><p>在上文中，我提到了海盗船Air540，这就是典型的双腔结构。在我的印象中，桌面机箱最早引入双腔概念的是2012年发布的酷冷至尊HAF XB。（这里如果有更早的，希望能指出。）之后海盗船Air240和Air540取得了很大的成功。不过HAF XB和海盗船的AIR系列的双腔结构不同，AIR系列是左右分腔，HAF XB是上下分腔。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-b3c3c60f11727881b0fcf582c10c471b_b.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-b01d0f20861a79ed281fe2002de234a0_b.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-6e9e6f749446102d2bf79c3f0475f42f_b.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+</blockquote>
+<p>因为分腔的关系，整体结构显得简单和模块化。主板侧的大面积侧透效果挺不错的。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-f083327943f0b67528743b588293476c_b.jpg" alt="HAF XB EVO" title="">
+                </div>
+                <div class="image-caption">HAF XB EVO</div>
+            </figure>
+</blockquote>
+<p>HAF XB EVO这种上下分仓的设计，如果做侧透效果就没有AIR系列那么好。</p>
+<p>那么这种双腔结构有什么优势呢？</p>
+<ol>
+<li>双腔结构可以肆无忌惮将存储区转移到电源一侧，这样就能大幅缩短风道距离，增强效能。</li>
+<li>拜双腔结构所赐，机箱会从以前的瘦高变为矮胖，前面板或顶部可以很容易的设计一个大风扇位，这是传统立式机箱很难做到的。</li>
+<li>同时主板区与电源区、存储区分离，就能天然走背线，多余的电源线材也能很方便的藏起来。而且侧透只透主板区，能够提高美观程度。</li>
+</ol>
+<p>缺点也很难明显，占地面积一般情况下很珍贵，这种机箱太占地方了。</p>
+<p>上文谈到的双腔结构其实已经有一些模块化理念了，要讨论模块化理念必然绕不开Tt Level10</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-6bddac37279a6d20bb65e8446d5e9686_b.jpg" alt="Tt Level10" title="">
+                </div>
+                <div class="image-caption">Tt Level10</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-6bddac37279a6d20bb65e8446d5e9686_b.jpg" alt="Tt Level10" title="">
+                </div>
+                <div class="image-caption">Tt Level10</div>
+            </figure>
+</blockquote>
+<p>Tt Level10这样的机箱获再多的奖也不算多。不考虑其设计理念光靠造型就已经足够征服人了，这样的现象级机箱是不能评价的。</p>
+<p>模块化理念无疑是先进的，但台式电脑本质上模块化程度非常高，显卡，硬盘等等已经是外包非常好的模块了。我想Tt的最终幻想应该是把机箱作为主板，这些小房子作为零件，但这无疑是不现实的，机箱的本质还是模块外包的一层壳，没有机箱电脑也能运行。所以，其它机箱也丝毫没有得到Level10的馈赠。</p>
+<p>这篇文章在这里就完结了，相信大家对于机箱有了更深层的理解。我将在下一篇文章中探讨不同机箱品牌的特点。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;主板？机箱？&quot;&gt;&lt;a href=&quot;#主板？机箱？&quot; class=&quot;headerlink&quot; title=&quot;主板？机箱？&quot;&gt;&lt;/a&gt;主板？机箱？&lt;/h1&gt;&lt;p&gt;要讲塔的概念，就要先从主板尺寸讲起。在1995年，Intel颁布了ATX( Advanced Technology Extended)标准来规范主板设计，在这个标准之下衍生出了ATX、Micro-ATX、Mini-ITX、Extended-ATX、HPTX、XL-ATX等等主板尺寸。在这里主要介绍常见的ATX、MATX、ITX、E-ATX（E-ATX其实已经比较不常见了。）版型。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="https://wcnvidia.github.io/blog/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机箱杂谈（一）：论结构（一）</title>
+    <link href="https://wcnvidia.github.io/blog/2017/05/28/%E6%9C%BA%E7%AE%B1%E6%9D%82%E8%B0%88%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E8%AE%BA%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://wcnvidia.github.io/blog/2017/05/28/机箱杂谈（一）：论结构（一）/</id>
+    <published>2017-05-28T11:12:27.000Z</published>
+    <updated>2017-05-28T11:52:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是优秀的结构？"><a href="#什么是优秀的结构？" class="headerlink" title="什么是优秀的结构？"></a>什么是优秀的结构？</h1><p>衡量机箱的好坏大抵有两个指标，一是做工用料的优劣程度，二是结构的合理程度。一般来讲，ATX机箱不用特殊设计，就能有合理的结构。但M-ATX和ITX机箱为了压缩体积，就会在内部进行特殊设计，这也特别考验厂商的设计能力。<br><a id="more"></a><br>而衡量结构的好坏主要是通过检验其兼容性和散热能力。对于兼容性来讲，主要是散热器，显卡和电源的兼容性。要想有很强的兼容性，大概要满足以下几点。</p>
+<ol>
+<li>支持165MM高度的散热器。</li>
+<li>支持30CM长度的显卡。</li>
+<li>支持15CM长度的电源。<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-f0ed9e7f7c3592f42f78f46357f0a56a_b.jpg" alt="利民Silver Arrow IB-E Extreme" title="">
+                </div>
+                <div class="image-caption">利民Silver Arrow IB-E Extreme</div>
+            </figure> 
+</blockquote>
+</li>
+</ol>
+<p>利民Silver Arrow IB-E Extreme 高163MM。风冷之王。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-16fa21d814f2f5b30201d35a274e24c1_b.jpg" alt="利民True Spirit 140 Direct" title="">
+                </div>
+                <div class="image-caption">利民True Spirit 140 Direct</div>
+            </figure> 
+</blockquote>
+<p>利民True Spirit 140 Direct 高161MM。非常高性能薄单塔。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-cfd41058a32ac628aed50c483a32dbe3_b.jpg" alt="华硕Strix GTX1080" title="">
+                </div>
+                <div class="image-caption">华硕Strix GTX1080</div>
+            </figure> 
+</blockquote>
+<p>华硕Strix GTX1080 长29.8CM。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-aff6f7f7a34545fe19781120289f289d_b.jpg" alt="索泰GTX1080至尊Plus OC" title="">
+                </div>
+                <div class="image-caption">索泰GTX1080至尊Plus OC</div>
+            </figure> 
+</blockquote>
+<p>索泰GTX1080至尊Plus OC 长30CM。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-1fe6a4dadd7a4020b0c09e0140fe22c9_b.jpg" alt="海韵X650" title="">
+                </div>
+                <div class="image-caption">海韵X650</div>
+            </figure> 
+</blockquote>
+<p>海韵X650，长15CM。大多数ATX电源长度为14CM。 </p>
+<p>满足以上三点，就能获得良好的兼容性了。至于散热能力则很难量化，对于ATX中塔机箱，散热一般都不会太差。但对于小机箱，因为空间小，设备拥挤，风扇位少很多时候散热能力不太理想。</p>
+<h1 id="典型ATX机箱结构的发展历程"><a href="#典型ATX机箱结构的发展历程" class="headerlink" title="典型ATX机箱结构的发展历程"></a>典型ATX机箱结构的发展历程</h1><p>要想了解小机箱为什么难以兼具兼容性，散热能力和小体积。我们要先看一下机箱的发展。在2003年，INTEL提出了CAG1.1规范，38°机箱在这个规范下应运而生，所谓38°机箱就是指在CPU散热器2CM处，气流温度可以控制在38°。当然这个规范的实用性有待商榷，但在这个规范之下催生了以下结构的机箱。并整个机箱结构的发展影响深远。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-b6e8669f82dad18a5d82805933a4757e_b.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+</blockquote>
+<p>我在网上随意找了一下图，加工了一下。简单地说，就是电源上置共享机箱风道，整体右进左出。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-5ca34ff2d0462074fc9eebf914345a26_b.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+</blockquote>
+<p>这种机箱侧板还有CPU位置导风罩，显卡位也有开孔。</p>
+<p>随着CAG1.1规范逐渐被TAC2.0规范取代，CPU位置的导风罩被取消<em>（吐槽：恐怕INTEL设计导风罩的时候只考虑了INTEL原装散热器吧。）</em>，侧板位开孔变得更大，CPU和显卡的开孔连在了一起。<br>现在的机箱又引入了背板走线和电源下置独立风道这两个概念。时至今日大部分ATX中塔机箱都是这样： </p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-eeeff8e1f668170894079053689c671d_b.jpg" alt="海盗船600T" title="">
+                </div>
+                <div class="image-caption">海盗船600T</div>
+            </figure>
+</blockquote>
+<p>图为海盗船600T，我把图加工了一下。这是现在中塔ATX机箱比较标准的结构。电源下置，背板走线，风道总体右进左出，机箱上下有可选风扇位。</p>
+<p>那么可以看到上图的机箱，电源有近乎无限的兼容性。显卡可能会碰到硬盘（600T比较大因此基本上不存在，很多ATX中塔机箱没这么大），所以硬盘笼采用可拆卸设计即可保证显卡的兼容性，而CPU散热器的限高则取决于机箱的宽度。也就是说机箱如果比较胖，就会有很好的散热器兼容性。</p>
+<h1 id="百花齐放的M-ATX机箱结构"><a href="#百花齐放的M-ATX机箱结构" class="headerlink" title="百花齐放的M-ATX机箱结构"></a>百花齐放的M-ATX机箱结构</h1><p>但是小机箱（MATX或ITX机箱）是这样的吗？完全不是这样的，小机箱没有类似的公版设计。采用这种设计的小机箱也 不是没有。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-b527b784c7d15ff9a8b54c09de8d5e8d_b.jpg" alt="安钛克Mini P180" title="">
+                </div>
+                <div class="image-caption">安钛克Mini P180</div>
+            </figure>
+</blockquote>
+<p>所以为了缩减体积，就必须改良甚至抛弃传统的结构。在传统结构中，首当其冲的就是抛弃了使用率很低的5.25位，3.5位HDD也在逐步被淘汰。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-5d2610e0ccc1a7064dd71852079128b0_b.jpg" alt="乔思伯RM3" title="">
+                </div>
+                <div class="image-caption">乔思伯RM3</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-a49b1a056892c3f4cb5aed35f2cf9fe0_b.jpg" alt="乔思伯RM3结构图" title="">
+                </div>
+                <div class="image-caption">乔思伯RM3结构图</div>
+            </figure>
+</blockquote>
+<p>这是乔思伯RM3，三围（宽/深/高）21.5cmx33.6x39.8cm，CPU限高17CM，显卡限长31CM，电源限长16.5CM。兼容性非常不错。</p>
+<p>可以看到RM3是传统的结构，但彻底抛弃了5.25和3.5位。硬盘直接安装在机箱壁上。其高明之处就在，在体积、兼容性和散热这三个维度上，得到了很好的平衡。同时，电源区做遮挡设计，让非全模组并且定制线的电源，也能获得较大的美观程度，大大的提高了侧透的实用性。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-7e80fd48650e0e16c6ae9aea53bfbc55_b.jpg" alt="银欣TJ08E" title="">
+                </div>
+                <div class="image-caption">银欣TJ08E</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-d1cd3b47a969334dab871f8789811786_b.jpg" alt="银欣TJ08E结构图" title="">
+                </div>
+                <div class="image-caption">银欣TJ08E结构图</div>
+            </figure>
+</blockquote>
+<p>这是银欣TJ08E，三围（宽/深/高）21cmx38.5cmx37.4cm。CPU限高16.5CM，显卡限长33.6CM，电源限长16CM。难能可贵的是还保留了5.25和3.5位。前方还带有一枚18CM的穿甲弹风扇，整体结构堪称完美。</p>
+<p>不得不叹服银欣的设计功力，TJ08E将传统机箱左侧安装改为右侧安装，这样主板需要自然旋转180° ，这时CPU的位置就会调转一个头在机箱下部，18CM穿甲弹风扇就能覆盖到整个主板区和硬盘区。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-7a4605807966532ff46b52678fd2b179_b.jpg" alt="银欣SG09" title="">
+                </div>
+                <div class="image-caption">银欣SG09</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-2707a726036a7377e0545b6231a7192d_b.jpg" alt="银欣SG09透视图" title="">
+                </div>
+                <div class="image-caption">银欣SG09透视图</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic4.zhimg.com/v2-081f587f1ca7259accd8d162bcc6226f_b.jpg" alt="银欣SG09侧视图1" title="">
+                </div>
+                <div class="image-caption">银欣SG09侧视图1</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-5395cddcd08224291e218dc4b6b103b8_b.jpg" alt="银欣SG09侧视图2" title="">
+                </div>
+                <div class="image-caption">银欣SG09侧视图2</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-eaf59df70e7f8d9bb11d85836b788cd0_b.jpg" alt="银欣SG09结构图" title="">
+                </div>
+                <div class="image-caption">银欣SG09结构图</div>
+            </figure>
+</blockquote>
+<p>这是银欣SG09，三围（宽/深/高）22cmx35.4cmx29.5cm。CPU限高16.5CM，显卡限长33.7CM，电源限长18CM。结构为放弃5、3.25位，电源前置，存储背置（这里盗了一张超能的图来展示存储区），风道为顶进、侧进后出，上置18CM穿甲弹风量很强，侧面也有9cm/9cm/12cm帮助显卡散热，甚至背后还有1枚8CM风扇帮助存储区散热。</p>
+<p>SG09毫不夸张地说，做到了MATX结构的极限，在尽可能缩减体积的情况下，兼具了极强的兼容性和散热能力，SG09的散热能力足以让很多大机箱都汗颜 。这就是银欣设计能力最为淋漓尽致的体现。体积、兼容性、散热器能力三个维度都可以拿近乎满分。</p>
+<h1 id="完全重构的ITX机箱结构"><a href="#完全重构的ITX机箱结构" class="headerlink" title="完全重构的ITX机箱结构"></a>完全重构的ITX机箱结构</h1><p>如果说MATX结构还可以继承ATX的遗产，ITX则将整个结构做了重新的设计。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-d2a1b69830f1a4636b88b32e6e3fe49d_b.jpg" alt="Fractal design Node304" title="">
+                </div>
+                <div class="image-caption">Fractal design Node304</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic1.zhimg.com/v2-fbabc2817785826726fd8fac84386cb0_b.jpg" alt="Fractal design Node304俯视图" title="">
+                </div>
+                <div class="image-caption">Fractal design Node304俯视图</div>
+            </figure>
+</blockquote>
+<p>这是Fractal design Node304，三围（宽/深/高）25cmx37.4cmx21cm。CPU限高16.5CM，显卡限长31CM，电源限长16CM。机箱结构方面，将传统机箱把主板安装在侧板改为安装在底部，这样调整就能在保持卧式不变的情况下，尽可能的缩减机箱的高度。同时前置2x8cm风扇，后置12cm风扇，也能保证合理的风道，因为显卡的散热器直接面向侧板，所以在侧板开孔就能保证显卡的进气。</p>
+<p>ITX卧式机箱首推Fractal design Node304，整体结构设计非常出色。体积得当，散热合理，兼容性强，在ITX机箱上很少有完成度如此高的产品。即便是银欣的SG08/11/12/13等等卧式机箱，因为没有改变主板的安装位置，也就很难做好散热器的兼容性。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/v2-ea2a3230ac7237f05be92d8d35d57c12_b.jpg" alt="乔思伯VR1" title="">
+                </div>
+                <div class="image-caption">乔思伯VR1</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-5ea88a1aa17fc2a11689530ceb26d2f5_b.jpg" alt="乔思伯VR1结构图1" title="">
+                </div>
+                <div class="image-caption">乔思伯VR1结构图1</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic2.zhimg.com/v2-654e22b973c1145b243956a76d407e99_b.jpg" alt="乔思伯VR1结构图2" title="">
+                </div>
+                <div class="image-caption">乔思伯VR1结构图2</div>
+            </figure>
+</blockquote>
+<p>这是乔思伯VR1，三围（宽/深/高）23.8cmx23.9cmx39.5cm。CPU限高19CM，显卡限长30/32CM（取决于底部是否安装风扇），电源限长17CM。机箱结构方面，VR1直接采用了垂直风道的设计。主板主体+显卡占据主体空间的3/4，电源占据剩下的1/4。存储位采用了乔思伯惯用的壁挂设计。虽然受限于底部仅仅12CM风扇进气，整个垂直风道的散热效能不如预想中的强劲，但也聊胜于无。<em>（部分显卡散热器的热管中的液体会受到重力作用，影响液体回流，导致热管效能大幅降低。）</em></p>
+<p>银欣作为垂直风道的发明者，早在2012年就推出了FT03MINI，但为了实现垂直风道，FT03MINI牺牲了很大的兼容性。而乔思伯VR1兼容性良好，虽然有点高，但是占地面积特别小。对于大多数人来说，占地面积要比高度来得宝贵，所以体积控制也算得当。 </p>
+<p>其实写到这里，大家已经对优秀的结构有了定论。只要兼容性优秀同时具备一定的散热能力的结构就是好结构。如果是小机箱，再尽可能的缩减体积，就是非常优秀的结构了。</p>
+<p>尽管一百个人心中有一百个哈姆雷特，机箱的外观难以评价其好坏。但结构的优劣却是能客观衡量的，希望大家在挑选机箱（特别是小机箱）的路上不要光看外形，同时也要注意内部结构，毕竟内部结构直接的影响到了实用性。也希望大家能够挑选到一个好的机箱。</p>
+<p>我将在后续的文章中，逐步的探讨机箱或者电脑的其他方面，希望能为大家做出一点小小的贡献。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是优秀的结构？&quot;&gt;&lt;a href=&quot;#什么是优秀的结构？&quot; class=&quot;headerlink&quot; title=&quot;什么是优秀的结构？&quot;&gt;&lt;/a&gt;什么是优秀的结构？&lt;/h1&gt;&lt;p&gt;衡量机箱的好坏大抵有两个指标，一是做工用料的优劣程度，二是结构的合理程度。一般来讲，ATX机箱不用特殊设计，就能有合理的结构。但M-ATX和ITX机箱为了压缩体积，就会在内部进行特殊设计，这也特别考验厂商的设计能力。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="https://wcnvidia.github.io/blog/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>成都理工大学暴雨洪水管理模型（SWMM）应用研究</title>
