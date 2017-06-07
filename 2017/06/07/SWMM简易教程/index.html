@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>SWMM简易教程 | 蝠鲼的南中国海 | 王在灵沼，于牣鱼跃。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="学习">
+    <meta name="description" content="SWMM简易教程1 软件准备EPA SWMM是一个开源软件，在官方网站可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。                                                                                               图1-1 SWMM官网图">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SWMM简易教程">
+<meta property="og:url" content="https://wcnvidia.github.io/2017/06/07/SWMM简易教程/index.html">
+<meta property="og:site_name" content="蝠鲼的南中国海">
+<meta property="og:description" content="SWMM简易教程1 软件准备EPA SWMM是一个开源软件，在官方网站可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。                                                                                               图1-1 SWMM官网图">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/e8E6j.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/e8KOc.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/e8YPK.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAJd7.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAgC6.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAk3T.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAtsM.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAwIt.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAfOF.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAikJ.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAnH0.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eA6Rr.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAe01.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAldd.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eACCa.png">
+<meta property="og:image" content="http://t1.picb.cc/uploads/2017/06/07/eAcNu.png">
+<meta property="og:updated_time" content="2017-06-07T09:17:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SWMM简易教程">
+<meta name="twitter:description" content="SWMM简易教程1 软件准备EPA SWMM是一个开源软件，在官方网站可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。                                                                                               图1-1 SWMM官网图">
+<meta name="twitter:image" content="http://t1.picb.cc/uploads/2017/06/07/e8E6j.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="蝠鲼的南中国海" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wcnvidia</h5>
+          <a href="mailto:158677136@qq.com" title="158677136@qq.com" class="mail">158677136@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://www.zhihu.com/people/zhang-gao-qiu-48/activities" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                知乎
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">SWMM简易教程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">SWMM简易教程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-07T09:10:59.000Z" itemprop="datePublished" class="page-time">
+  2017-06-07
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SWMM简易教程"><span class="post-toc-number">1.</span> <span class="post-toc-text">SWMM简易教程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-软件准备"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1 软件准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-使用方法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2 使用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-操作界面简介"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2.1 操作界面简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-最简模型构建"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.2 最简模型构建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-1-设置子汇水区"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">2.2.1 设置子汇水区</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-2-设置铰点"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">2.2.2 设置铰点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-3-设置排放口"><span class="post-toc-number">1.2.2.3.</span> <span class="post-toc-text">2.2.3 设置排放口</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-4-设置管道"><span class="post-toc-number">1.2.2.4.</span> <span class="post-toc-text">2.2.4 设置管道</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-5-设置雨量计"><span class="post-toc-number">1.2.2.5.</span> <span class="post-toc-text">2.2.5 设置雨量计</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-6-添加时间序列"><span class="post-toc-number">1.2.2.6.</span> <span class="post-toc-text">2.2.6 添加时间序列</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-模型运行及结果查看"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2.3 模型运行及结果查看</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-1-模型运行"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">2.3.1 模型运行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-2-模型结果查看"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">2.3.2 模型结果查看</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#附录"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">附录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A-SWMM汉化版及中文使用手册"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">A SWMM汉化版及中文使用手册</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-芝加哥雨型生成器"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">B 芝加哥雨型生成器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-我自己建的模型"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">C 我自己建的模型</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-SWMM简易教程"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">SWMM简易教程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-07 17:10:59" datetime="2017-06-07T09:10:59.000Z"  itemprop="datePublished">2017-06-07</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="SWMM简易教程"><a href="#SWMM简易教程" class="headerlink" title="SWMM简易教程"></a>SWMM简易教程</h1><h2 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1 软件准备"></a>1 软件准备</h2><p>EPA SWMM是一个开源软件，<a href="https://www.epa.gov/water-research/storm-water-management-model-swmm" target="_blank" rel="external">在官方网站</a>可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/e8E6j.png" alt="图1-1 SWMM官网图" title="">
+                </div>
+                <div class="image-caption">图1-1 SWMM官网图</div>
+            </figure>
+</blockquote>
+<p>点击图1-2”Self-Extracting Installation Program for SWMM 5.1.012 (EXE)”链接即可安装SWMM软件，安装时一路next即可。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/e8KOc.png" alt="图1-2 下载位置图" title="">
+                </div>
+                <div class="image-caption">图1-2 下载位置图</div>
+            </figure>
+</blockquote>
+<p>如果觉得这样探索网页太麻烦，也可以<a href="https://www.epa.gov/sites/production/files/2017-03/swmm51012_setup_2.exe" target="_blank" rel="external">点击这里</a>直接下载。</p>
+<h2 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2 使用方法"></a>2 使用方法</h2><h3 id="2-1-操作界面简介"><a href="#2-1-操作界面简介" class="headerlink" title="2.1 操作界面简介"></a>2.1 操作界面简介</h3><p>打开软件，默认的界面如图2-1所示，分为6个部分，我用红、橙、绿、蓝、黑、灰六个颜色的方框标记了这六个部分。其中：</p>
+<ul>
+<li>红色：红色方框代表软件的菜单栏，软件中大部分功能都能在菜单栏里面找到。</li>
+<li>橙色：橙色方框代表软件的快捷操作栏，打开文件、打印图形、模型运算、查看数据等功能均可快速在此栏实现。</li>
+<li>绿色：绿色方框代表软件的数据栏，当我们开始建模时，数据的录入、图形的绘制、属性的设置等功能需要此部分实现。</li>
+<li>蓝色：蓝色方框代表软件数据的编辑栏，在这个方框内，我们能够新建或删除绿色方框中的数据。</li>
+<li>黑色：黑色方框代表软件图形的可视化窗口。</li>
+<li>灰色：灰色方框代表软件的属性单位栏，我们可以在这栏内更换不同的单位制、查看软件内坐标、调整缩放等级等。<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/e8YPK.png" alt="图2-1 软件默认主界面图" title="">
+                </div>
+                <div class="image-caption">图2-1 软件默认主界面图</div>
+            </figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-2-最简模型构建"><a href="#2-2-最简模型构建" class="headerlink" title="2.2 最简模型构建"></a>2.2 最简模型构建</h3><p>模型的最简构建，仅仅需要设置雨量计（Rain Gages）、时间序列（Time Series）、子汇水区（Subcatchments）、铰点（Junctions）、排放口（Outfalls）、管道（Conduits）即可实现，下面我将构建一个最简模型。</p>
+<h4 id="2-2-1-设置子汇水区"><a href="#2-2-1-设置子汇水区" class="headerlink" title="2.2.1 设置子汇水区"></a>2.2.1 设置子汇水区</h4><p>操作步骤：</p>
+<ol>
+<li><p>找到软件左侧数据栏，点击Hydrology（水文）模块。(图2-2)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAJd7.png" alt="图2-2" title="">
+                </div>
+                <div class="image-caption">图2-2</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>点击Subcatchments，找到并点击数据栏底部”+”按钮。(图2-3)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAgC6.png" alt="图2-3" title="">
+                </div>
+                <div class="image-caption">图2-3</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>在右侧可视化窗口中随意绘制一个图形（形状、大小任意都可），默认生成一个名为”1”的子汇水区。(图2-4)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAk3T.png" alt="图2-4" title="">
+                </div>
+                <div class="image-caption">图2-4</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>找到软件左下编辑栏的”1”→双击”1”，就可打开名为”1”的子汇水区的属性设置，这里暂时先不设置子汇水区属性。(图2-5)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAtsM.png" alt="图2-5" title="">
+                </div>
+                <div class="image-caption">图2-5</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<p>SWMM软件整体操作逻辑非常接近，因此后续的步骤中，我将不会这样一步一步的截图。</p>
+<h4 id="2-2-2-设置铰点"><a href="#2-2-2-设置铰点" class="headerlink" title="2.2.2 设置铰点"></a>2.2.2 设置铰点</h4><p>操作步骤：</p>
+<ol>
+<li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Nodes。</li>
+<li>点击Junctions，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中任意位置点击一下即可生成一个名为”2”的铰点。</li>
+<li>执行本文2.2.1中第四步，在子汇水区1的属性Outlet中输入2，这步的意思是把子汇水区”1”的出水口设置为铰点2。(图2-6)<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAwIt.png" alt="图2-6" title="">
+                </div>
+                <div class="image-caption">图2-6</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<h4 id="2-2-3-设置排放口"><a href="#2-2-3-设置排放口" class="headerlink" title="2.2.3 设置排放口"></a>2.2.3 设置排放口</h4><p>操作步骤：</p>
+<ol>
+<li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Nodes。</li>
+<li>点击Outfalls，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中任意位置点击一下即可生成一个名为”3”的排放口。<h4 id="2-2-4-设置管道"><a href="#2-2-4-设置管道" class="headerlink" title="2.2.4 设置管道"></a>2.2.4 设置管道</h4>操作步骤：</li>
+<li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Links。</li>
+<li>点击Conduits，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中连接铰点”2”和排放口”3”（务必先点铰链再点排放口，这个顺序关系到哪个点是入水口，哪个点是出水口，先点的为入水口，后点的为出水口，如果之后要改变管道的入水口和出水口，可以在管道”1”的属性设置中设置Inlet Node和Outlet Node），即可生成管道”1”。（图2-7）<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAfOF.png" alt="图2-7" title="">
+                </div>
+                <div class="image-caption">图2-7</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<h4 id="2-2-5-设置雨量计"><a href="#2-2-5-设置雨量计" class="headerlink" title="2.2.5 设置雨量计"></a>2.2.5 设置雨量计</h4><p>操作步骤：</p>
+<ol>
+<li>找到软件左侧数据栏，点击Hydrology（水文）模块。</li>
+<li>点击Rain Gages，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中随意绘制一个图形（形状、大小任意都可），默认生成一个名为”1”的雨量计。</li>
+<li>找到软件左下编辑栏的”1”→双击”1”，就可打开名为”1”的雨量计的属性设置，这里暂时先不设置雨量计属性。<h4 id="2-2-6-添加时间序列"><a href="#2-2-6-添加时间序列" class="headerlink" title="2.2.6 添加时间序列"></a>2.2.6 添加时间序列</h4>操作步骤：</li>
+<li>找到软件左侧数据栏，点击Time Series。</li>
+<li>找到并点击数据栏底部”+”按钮。</li>
+<li>在打开的时间序列编辑器里Time Series Name栏输入任意名称，比如”S1”。Description可以不描述。</li>
+<li><p>如图所示根据实际情况录入降水数据，Date可不用输入，Time的格式H:M的意思是降雨在几时几分，Value的单位是mm，我随便录入了一段降雨数据。（但时间要规律，以配合雨量计时间间隔的输入） </p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAikJ.png" alt="图2-8 时间序列数据图" title="">
+                </div>
+                <div class="image-caption">图2-8 时间序列数据图</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>执行本文2.2.5第四步，在雨量计属性设置中找到Series Name，下拉选择S1，即可把S1这个时间序列置入雨量计”1”。再将Time Interval（时间间隔）设置为0:30（这里根据实际情况设置）（图2-9）。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAnH0.png" alt="图2-9 设置雨量计" title="">
+                </div>
+                <div class="image-caption">图2-9 设置雨量计</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>执行本文2.2.1第四步，在子汇水区1的Rain Gage属性中选中1，其意为将雨量站1与子汇水区1结合。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eA6Rr.png" alt="图2-10" title="">
+                </div>
+                <div class="image-caption">图2-10</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-3-模型运行及结果查看"><a href="#2-3-模型运行及结果查看" class="headerlink" title="2.3 模型运行及结果查看"></a>2.3 模型运行及结果查看</h3><h4 id="2-3-1-模型运行"><a href="#2-3-1-模型运行" class="headerlink" title="2.3.1 模型运行"></a>2.3.1 模型运行</h4><p>点击如图2-11中的类似闪电一样的按钮，之后弹出一个窗口点击OK。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAe01.png" alt="图2-11" title="">
+                </div>
+                <div class="image-caption">图2-11</div>
+            </figure>
+<h4 id="2-3-2-模型结果查看"><a href="#2-3-2-模型结果查看" class="headerlink" title="2.3.2 模型结果查看"></a>2.3.2 模型结果查看</h4><p>本文以查看铰点”2”总流量为例，介绍查看模拟结果的方法。</p>
+<ol>
+<li>点击图上的铰点”2”。</li>
+<li>点击快捷菜单栏的Create a time series按钮。（图2-12）<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAldd.png" alt="图2-12" title="">
+                </div>
+                <div class="image-caption">图2-12</div>
+            </figure>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li>在弹出的窗口中点击Edit按钮。</li>
+<li><p>在Variable选项中下拉选择Total Inflow。（图2-13）</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eACCa.png" alt="图2-13" title="">
+                </div>
+                <div class="image-caption">图2-13</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>点击Accept按钮，再点OK按钮，查看图表。（图2-14）</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAcNu.png" alt="图2-14" title="">
+                </div>
+                <div class="image-caption">图2-14</div>
+            </figure> 
+</blockquote>
+</li>
+</ol>
+<p>至此最简单的软件使用方法介绍完毕。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="A-SWMM汉化版及中文使用手册"><a href="#A-SWMM汉化版及中文使用手册" class="headerlink" title="A SWMM汉化版及中文使用手册"></a>A SWMM汉化版及中文使用手册</h3><p>SWMM汉化版相比SWMM原版，版本更老（还处于5.0版本），算法和最新版本不同，并且LID控制单元要比官方版本更少。但是对于学习SWMM软件的使用是非常友好的。</p>
+<p><a href="https://pan.baidu.com/s/1geXw0vh" target="_blank" rel="external">点击这里下载</a>，提取密码zr84。</p>
+<h3 id="B-芝加哥雨型生成器"><a href="#B-芝加哥雨型生成器" class="headerlink" title="B 芝加哥雨型生成器"></a>B 芝加哥雨型生成器</h3><p>对于没有具体实际降水情景的情况，我们需要模拟降水。使用芝加哥雨型生成器和当地的暴雨公式，能够降雨数据，把数据录入SWMM模型和EXCEL就能做降雨分析。</p>
+<p><a href="https://pan.baidu.com/s/1pKOsCQJ" target="_blank" rel="external">点击这里下载</a>，提取密码akiv。</p>
+<h3 id="C-我自己建的模型"><a href="#C-我自己建的模型" class="headerlink" title="C 我自己建的模型"></a>C 我自己建的模型</h3><p>为了写毕业论文，我给成都理工大学进行了SWMM建模，这里分享出来，大家可以下载。<br>使用方法：菜单栏File→Open→找到SWMM.INP即可。</p>
+<p><a href="https://pan.baidu.com/s/1dFrdpLJ" target="_blank" rel="external">点击这里下载</a>，提取密码ds5w。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-07T09:17:21.000Z" itemprop="dateUpdated">2017-06-07 17:17:21</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="https://wcnvidia.github.io">
+            <img src="/img/avatar.jpg" alt="wcnvidia">
+            wcnvidia
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/&title=《SWMM简易教程》 — 蝠鲼的南中国海&pic=https://wcnvidia.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/&title=《SWMM简易教程》 — 蝠鲼的南中国海&source=徜徉的蝠鲼" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SWMM简易教程》 — 蝠鲼的南中国海&url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/&via=https://wcnvidia.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/05/29/想象力最丰富的一次快题/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">想象力最丰富的一次快题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2134984"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>wcnvidia &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/&title=《SWMM简易教程》 — 蝠鲼的南中国海&pic=https://wcnvidia.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/&title=《SWMM简易教程》 — 蝠鲼的南中国海&source=徜徉的蝠鲼" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SWMM简易教程》 — 蝠鲼的南中国海&url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/&via=https://wcnvidia.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wcnvidia.github.io/2017/06/07/SWMM简易教程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACN0lEQVR42u3aUXKrMAwF0Ox/03QB70GuZNMp4virQ0jwSWcUWdLnE6/jZP376vWVs08+e9fmhYGB8VjGcbnO7rn+nN6V/NX/7AEDA+MFjCQUXofF/Eqy9XxvGBgYGNf3VANukgJiYGBg3MHIt5WEbwwMDIyVQ+xK2pcX0W4/i2NgYDyQ0fvo3/n7lv4GBgbGoxhHce0tz1XD6+muMDAwRjN6pbQkZcwTx+iAmhybMTAwRjPy4n41+OYbqjZHP1UlBgbGYxkr4xS90JkPWOT3YGBgzGbsKqj12gO99gMGBgZG/oCVRLA6OlYI9BgYGOMYvfLZSkjNj6aF0QoMDIzRjOoBcldZP0lJyz8DGBgYr2HsSuaq780ZzU4sBgbGCMauQn8ecHulty+ncAwMjKGM/BiZNwmSh1VHNz69hYGBMZSRb3q96ZiPguUpJgYGxiRGbxgibxL0Ggm3/DJgYGCMYPTeW+0h5mlf4ToGBsZoRi91K2ea8ReXH5hPn4iBgTGUUU3Okgf0Sml5o/TLsAUGBsZrGEl7sre5XriPkkIMDIwXMKoPS4preWGuenj+Mt2GgYExgnEUV15cy7dY/SJO/w8YGBhDGSvNzmoClwTrPK1stjQwMDAey6iOQewKiNX2QHNyBAMDYxBjpWS2cqytpnqFszgGBsaLGUmwvgb3hirKjQEMDAyM1nhEssX8/s0BFwMD488zklC4MtpVHbO4sdyGgYHxQEavlpUPXiRJYe8IjYGB8QLGD/KHA/H4AejZAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.7" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '有时天真';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '蝠鲼的南中国海';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

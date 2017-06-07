@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wcnvidia.github.io/"/>
-  <updated>2017-05-30T01:41:27.000Z</updated>
+  <updated>2017-06-07T09:17:21.000Z</updated>
   <id>https://wcnvidia.github.io/</id>
   
   <author>
@@ -14,6 +14,245 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SWMM简易教程</title>
+    <link href="https://wcnvidia.github.io/2017/06/07/SWMM%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/"/>
+    <id>https://wcnvidia.github.io/2017/06/07/SWMM简易教程/</id>
+    <published>2017-06-07T09:10:59.000Z</published>
+    <updated>2017-06-07T09:17:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SWMM简易教程"><a href="#SWMM简易教程" class="headerlink" title="SWMM简易教程"></a>SWMM简易教程</h1><h2 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1 软件准备"></a>1 软件准备</h2><p>EPA SWMM是一个开源软件，<a href="https://www.epa.gov/water-research/storm-water-management-model-swmm" target="_blank" rel="external">在官方网站</a>可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/e8E6j.png" alt="图1-1 SWMM官网图" title="">
+                </div>
+                <div class="image-caption">图1-1 SWMM官网图</div>
+            </figure>
+</blockquote>
+<p>点击图1-2”Self-Extracting Installation Program for SWMM 5.1.012 (EXE)”链接即可安装SWMM软件，安装时一路next即可。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/e8KOc.png" alt="图1-2 下载位置图" title="">
+                </div>
+                <div class="image-caption">图1-2 下载位置图</div>
+            </figure>
+</blockquote>
+<p>如果觉得这样探索网页太麻烦，也可以<a href="https://www.epa.gov/sites/production/files/2017-03/swmm51012_setup_2.exe" target="_blank" rel="external">点击这里</a>直接下载。</p>
+<h2 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2 使用方法"></a>2 使用方法</h2><h3 id="2-1-操作界面简介"><a href="#2-1-操作界面简介" class="headerlink" title="2.1 操作界面简介"></a>2.1 操作界面简介</h3><p>打开软件，默认的界面如图2-1所示，分为6个部分，我用红、橙、绿、蓝、黑、灰六个颜色的方框标记了这六个部分。其中：</p>
+<ul>
+<li>红色：红色方框代表软件的菜单栏，软件中大部分功能都能在菜单栏里面找到。</li>
+<li>橙色：橙色方框代表软件的快捷操作栏，打开文件、打印图形、模型运算、查看数据等功能均可快速在此栏实现。</li>
+<li>绿色：绿色方框代表软件的数据栏，当我们开始建模时，数据的录入、图形的绘制、属性的设置等功能需要此部分实现。</li>
+<li>蓝色：蓝色方框代表软件数据的编辑栏，在这个方框内，我们能够新建或删除绿色方框中的数据。</li>
+<li>黑色：黑色方框代表软件图形的可视化窗口。</li>
+<li>灰色：灰色方框代表软件的属性单位栏，我们可以在这栏内更换不同的单位制、查看软件内坐标、调整缩放等级等。<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/e8YPK.png" alt="图2-1 软件默认主界面图" title="">
+                </div>
+                <div class="image-caption">图2-1 软件默认主界面图</div>
+            </figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-2-最简模型构建"><a href="#2-2-最简模型构建" class="headerlink" title="2.2 最简模型构建"></a>2.2 最简模型构建</h3><p>模型的最简构建，仅仅需要设置雨量计（Rain Gages）、时间序列（Time Series）、子汇水区（Subcatchments）、铰点（Junctions）、排放口（Outfalls）、管道（Conduits）即可实现，下面我将构建一个最简模型。</p>
+<h4 id="2-2-1-设置子汇水区"><a href="#2-2-1-设置子汇水区" class="headerlink" title="2.2.1 设置子汇水区"></a>2.2.1 设置子汇水区</h4><p>操作步骤：</p>
+<ol>
+<li><p>找到软件左侧数据栏，点击Hydrology（水文）模块。(图2-2)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAJd7.png" alt="图2-2" title="">
+                </div>
+                <div class="image-caption">图2-2</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>点击Subcatchments，找到并点击数据栏底部”+”按钮。(图2-3)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAgC6.png" alt="图2-3" title="">
+                </div>
+                <div class="image-caption">图2-3</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>在右侧可视化窗口中随意绘制一个图形（形状、大小任意都可），默认生成一个名为”1”的子汇水区。(图2-4)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAk3T.png" alt="图2-4" title="">
+                </div>
+                <div class="image-caption">图2-4</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>找到软件左下编辑栏的”1”→双击”1”，就可打开名为”1”的子汇水区的属性设置，这里暂时先不设置子汇水区属性。(图2-5)</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAtsM.png" alt="图2-5" title="">
+                </div>
+                <div class="image-caption">图2-5</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<p>SWMM软件整体操作逻辑非常接近，因此后续的步骤中，我将不会这样一步一步的截图。</p>
+<h4 id="2-2-2-设置铰点"><a href="#2-2-2-设置铰点" class="headerlink" title="2.2.2 设置铰点"></a>2.2.2 设置铰点</h4><p>操作步骤：</p>
+<ol>
+<li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Nodes。</li>
+<li>点击Junctions，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中任意位置点击一下即可生成一个名为”2”的铰点。</li>
+<li>执行本文2.2.1中第四步，在子汇水区1的属性Outlet中输入2，这步的意思是把子汇水区”1”的出水口设置为铰点2。(图2-6)<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAwIt.png" alt="图2-6" title="">
+                </div>
+                <div class="image-caption">图2-6</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<h4 id="2-2-3-设置排放口"><a href="#2-2-3-设置排放口" class="headerlink" title="2.2.3 设置排放口"></a>2.2.3 设置排放口</h4><p>操作步骤：</p>
+<ol>
+<li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Nodes。</li>
+<li>点击Outfalls，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中任意位置点击一下即可生成一个名为”3”的排放口。<h4 id="2-2-4-设置管道"><a href="#2-2-4-设置管道" class="headerlink" title="2.2.4 设置管道"></a>2.2.4 设置管道</h4>操作步骤：</li>
+<li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Links。</li>
+<li>点击Conduits，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中连接铰点”2”和排放口”3”（务必先点铰链再点排放口，这个顺序关系到哪个点是入水口，哪个点是出水口，先点的为入水口，后点的为出水口，如果之后要改变管道的入水口和出水口，可以在管道”1”的属性设置中设置Inlet Node和Outlet Node），即可生成管道”1”。（图2-7）<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAfOF.png" alt="图2-7" title="">
+                </div>
+                <div class="image-caption">图2-7</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<h4 id="2-2-5-设置雨量计"><a href="#2-2-5-设置雨量计" class="headerlink" title="2.2.5 设置雨量计"></a>2.2.5 设置雨量计</h4><p>操作步骤：</p>
+<ol>
+<li>找到软件左侧数据栏，点击Hydrology（水文）模块。</li>
+<li>点击Rain Gages，找到并点击数据栏底部”+”按钮。</li>
+<li>在右侧可视化窗口中随意绘制一个图形（形状、大小任意都可），默认生成一个名为”1”的雨量计。</li>
+<li>找到软件左下编辑栏的”1”→双击”1”，就可打开名为”1”的雨量计的属性设置，这里暂时先不设置雨量计属性。<h4 id="2-2-6-添加时间序列"><a href="#2-2-6-添加时间序列" class="headerlink" title="2.2.6 添加时间序列"></a>2.2.6 添加时间序列</h4>操作步骤：</li>
+<li>找到软件左侧数据栏，点击Time Series。</li>
+<li>找到并点击数据栏底部”+”按钮。</li>
+<li>在打开的时间序列编辑器里Time Series Name栏输入任意名称，比如”S1”。Description可以不描述。</li>
+<li><p>如图所示根据实际情况录入降水数据，Date可不用输入，Time的格式H:M的意思是降雨在几时几分，Value的单位是mm，我随便录入了一段降雨数据。（但时间要规律，以配合雨量计时间间隔的输入） </p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAikJ.png" alt="图2-8 时间序列数据图" title="">
+                </div>
+                <div class="image-caption">图2-8 时间序列数据图</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>执行本文2.2.5第四步，在雨量计属性设置中找到Series Name，下拉选择S1，即可把S1这个时间序列置入雨量计”1”。再将Time Interval（时间间隔）设置为0:30（这里根据实际情况设置）（图2-9）。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAnH0.png" alt="图2-9 设置雨量计" title="">
+                </div>
+                <div class="image-caption">图2-9 设置雨量计</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>执行本文2.2.1第四步，在子汇水区1的Rain Gage属性中选中1，其意为将雨量站1与子汇水区1结合。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eA6Rr.png" alt="图2-10" title="">
+                </div>
+                <div class="image-caption">图2-10</div>
+            </figure>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-3-模型运行及结果查看"><a href="#2-3-模型运行及结果查看" class="headerlink" title="2.3 模型运行及结果查看"></a>2.3 模型运行及结果查看</h3><h4 id="2-3-1-模型运行"><a href="#2-3-1-模型运行" class="headerlink" title="2.3.1 模型运行"></a>2.3.1 模型运行</h4><p>点击如图2-11中的类似闪电一样的按钮，之后弹出一个窗口点击OK。</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAe01.png" alt="图2-11" title="">
+                </div>
+                <div class="image-caption">图2-11</div>
+            </figure>
+<h4 id="2-3-2-模型结果查看"><a href="#2-3-2-模型结果查看" class="headerlink" title="2.3.2 模型结果查看"></a>2.3.2 模型结果查看</h4><p>本文以查看铰点”2”总流量为例，介绍查看模拟结果的方法。</p>
+<ol>
+<li>点击图上的铰点”2”。</li>
+<li>点击快捷菜单栏的Create a time series按钮。（图2-12）<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAldd.png" alt="图2-12" title="">
+                </div>
+                <div class="image-caption">图2-12</div>
+            </figure>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li>在弹出的窗口中点击Edit按钮。</li>
+<li><p>在Variable选项中下拉选择Total Inflow。（图2-13）</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eACCa.png" alt="图2-13" title="">
+                </div>
+                <div class="image-caption">图2-13</div>
+            </figure>
+</blockquote>
+</li>
+<li><p>点击Accept按钮，再点OK按钮，查看图表。（图2-14）</p>
+<blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://t1.picb.cc/uploads/2017/06/07/eAcNu.png" alt="图2-14" title="">
+                </div>
+                <div class="image-caption">图2-14</div>
+            </figure> 
+</blockquote>
+</li>
+</ol>
+<p>至此最简单的软件使用方法介绍完毕。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="A-SWMM汉化版及中文使用手册"><a href="#A-SWMM汉化版及中文使用手册" class="headerlink" title="A SWMM汉化版及中文使用手册"></a>A SWMM汉化版及中文使用手册</h3><p>SWMM汉化版相比SWMM原版，版本更老（还处于5.0版本），算法和最新版本不同，并且LID控制单元要比官方版本更少。但是对于学习SWMM软件的使用是非常友好的。</p>
+<p><a href="https://pan.baidu.com/s/1geXw0vh" target="_blank" rel="external">点击这里下载</a>，提取密码zr84。</p>
+<h3 id="B-芝加哥雨型生成器"><a href="#B-芝加哥雨型生成器" class="headerlink" title="B 芝加哥雨型生成器"></a>B 芝加哥雨型生成器</h3><p>对于没有具体实际降水情景的情况，我们需要模拟降水。使用芝加哥雨型生成器和当地的暴雨公式，能够降雨数据，把数据录入SWMM模型和EXCEL就能做降雨分析。</p>
+<p><a href="https://pan.baidu.com/s/1pKOsCQJ" target="_blank" rel="external">点击这里下载</a>，提取密码akiv。</p>
+<h3 id="C-我自己建的模型"><a href="#C-我自己建的模型" class="headerlink" title="C 我自己建的模型"></a>C 我自己建的模型</h3><p>为了写毕业论文，我给成都理工大学进行了SWMM建模，这里分享出来，大家可以下载。<br>使用方法：菜单栏File→Open→找到SWMM.INP即可。</p>
+<p><a href="https://pan.baidu.com/s/1dFrdpLJ" target="_blank" rel="external">点击这里下载</a>，提取密码ds5w。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;SWMM简易教程&quot;&gt;&lt;a href=&quot;#SWMM简易教程&quot; class=&quot;headerlink&quot; title=&quot;SWMM简易教程&quot;&gt;&lt;/a&gt;SWMM简易教程&lt;/h1&gt;&lt;h2 id=&quot;1-软件准备&quot;&gt;&lt;a href=&quot;#1-软件准备&quot; class=&quot;headerli
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="https://wcnvidia.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>想象力最丰富的一次快题</title>
@@ -527,46 +766,6 @@
     
     
       <category term="硬件" scheme="https://wcnvidia.github.io/tags/%E7%A1%AC%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>成都理工大学暴雨洪水管理模型（SWMM）应用研究</title>
-    <link href="https://wcnvidia.github.io/2017/05/28/%E6%88%90%E9%83%BD%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E6%9A%B4%E9%9B%A8%E6%B4%AA%E6%B0%B4%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9E%8B%EF%BC%88SWMM%EF%BC%89%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6/"/>
-    <id>https://wcnvidia.github.io/2017/05/28/成都理工大学暴雨洪水管理模型（SWMM）应用研究/</id>
-    <published>2017-05-28T08:04:56.000Z</published>
-    <updated>2017-05-30T14:46:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>海绵城市与低影响开发模式（LID）是城乡规划领域的研究热点，开展相关研究可以解决城市暴雨洪水管理问题。本文以成都理工大学区域为研究区域，基于暴雨洪水管理模型（SWMM）平台，对重现期为2、5、10、20年，为期1小时的降水，进行了SWMM建模分析。<a id="more"></a>研究表明：在雨峰出现15分钟后，各个节点的流量达到峰值，节点JC和节点JD的峰值流量最大；随着降雨重现期的增加，节点的峰值流量会不断增加，节点峰值流量的增长率高于降雨增长率；在添加LID单元之后，节点JC、JD的在不同重现期平均峰值流量分别下降了17.3%、26.3%；在LID单元性能中，渗透路面性能最好，在2年的降水重现期下，节点JC的峰值流量为0.92cms；雨水花园方案成熟，应用广泛，因此应积极设置可渗透路面、雨水花园等LID单元，以减少高强度降雨带来的危害。</p>
-<h1 id="第1章绪论"><a href="#第1章绪论" class="headerlink" title="第1章绪论"></a>第1章绪论</h1><h2 id="1-1-研究背景"><a href="#1-1-研究背景" class="headerlink" title="1.1 研究背景"></a>1.1 研究背景</h2><h3 id="1-1-1-城市化的问题突出"><a href="#1-1-1-城市化的问题突出" class="headerlink" title="1.1.1 城市化的问题突出"></a>1.1.1 城市化的问题突出</h3><p>&#160; &#160; &#160; &#160;伴随着城市的发展，城市用地规模的扩大，自然环境与人类建设发展之间的矛盾逐渐加剧，生态环境和地表景观发生了非常显著的变化。反应到城市中就是城区下垫面的不透水比例明显上升，这显著的改变了城区水文条件，导致了城市暴雨洪水管理中出现的诸多问题，如自然水质不断变差、旱涝灾害频率增加、内涝问题加重等。</p>
-<p>&#160; &#160; &#160; &#160;城市下垫面与城市水文条件息息相关，城市下垫面透水率越高，雨水就越能渗入地下水，而非直接进入排水管道。当城市处于未充分开发阶段时，城市中透水率较高的林地、湿地、耕地等等比例较高，这时大气降水渗透入地下水的比例会较大，降水造成的地表径流量就会相对较小，在城市化的进程逐步加快之后，城市里中的土地被征用，以前的林地、湿地、耕地变成了道路、建筑。这些硬化的道路，建筑的透水率远远无法和林地、湿地、耕地等土地相比，这导致了大气降水转化为地表径流量大幅上升，洪涝灾害的频率和强度也相应增加<sup>[1]</sup>。自2000年以来，我国平均每年发生200多起不同程度的城市内涝灾害，北京、成都、武汉等大城市成了城市内涝的重灾区<sup>[2]</sup>。</p>
-<p>&#160; &#160; &#160; &#160;除内涝问题之外，城市化的进程还改变了城市的物质迁移生态过程，使得城市非点源污染负荷量的剧增，导致河流水质和生态功能退化<sup>[3]</sup>。来自我国环境保护部2003年的数据表明，我国流经城市的河段90%受到了严重污染，75%的湖泊出现了富营养化<sup>[4]</sup>。</p>
-<p>&#160; &#160; &#160; &#160;随着地表水源被污染，人们为了满足生活、生产用水的需要，将目光投向了地下水。因透水率较低的下垫面阻碍了雨水的渗透，导致地下水的补给不足，这样就陷入了“城市建设污染地表水→开发地下水供给城市建设→城市建设阻碍地表水下渗→导致地下水位下降”的恶性循环之中，导致了诸如“地下漏斗”等的一系列环境负效应<sup>[5]</sup>。</p>
-<p>&#160; &#160; &#160; &#160;我国传统的暴雨洪水管理依赖于防洪规划和排水（雨水）工程规划[6]。城市防洪规划和排水(雨水)工程规划应对暴雨的指导理念均是传统的“以排为主”的雨洪管理理念，采取“硬排水”模式 ，将雨水几乎全部通过城市雨水管网系统收集、排放至受纳水体，较少考虑雨洪调蓄、水质保护、资源化利用等措施和技术<sup>[7]</sup>。这种雨水规划没有考虑到自然生态系统对于暴雨洪水管理的积极作用，仅仅靠人工排水工程排水，容易造成排水系统出现瓶颈。因此，伴随着城市化带来的城市下垫面渗水能力变差，暴雨净流量的增加，排水管网系统备受考验。在我国受限于历史条件等原因，管网设计不合理，建造规格较低，这些管网严重过载的情况导致了城市出现比较严重的内涝情况，此时未经处理过的雨水直接进入城市管网系统极易造成水体污染，招致水质型缺水情况的发生。</p>
-<h3 id="1-1-2-传统暴雨洪水管理的不足"><a href="#1-1-2-传统暴雨洪水管理的不足" class="headerlink" title="1.1.2 传统暴雨洪水管理的不足"></a>1.1.2 传统暴雨洪水管理的不足</h3><blockquote>
-<p>我国传统的暴雨洪水管理依赖于防洪规划和排水（雨水）工程规划[4]。而城市防洪规划和排水(雨水)工程规划应对暴雨的指导思想均是传统的“以排为主”的雨洪管理理念,采取管网工程(灰色基础设施)“硬排水”模式[5] ,将雨水几乎全部通过城市雨水管网系统收集、排放至受纳水体,较少考虑雨洪调蓄、水质保护、资源化利用等措施和技术[6]。</p>
-</blockquote>
-<p> &#160; &#160; &#160; &#160;这种规划没有考虑自然生态系统对于暴雨洪水管理的应用，仅仅靠人工排水工程排水。因此，伴随着城市化带来的城市下垫面渗水能力变差，暴雨净流量的增加，排水管网系统备受考验。而在我国受限于历史条件等原因，管网设计不合理，建造规格较低。这些管网严重过载的情况就导致了城市出现比较严重的内涝情况。而且此时未经处理过的雨水直接进入城市管网系统极易造成水体污染，招致水质型缺水情况的发生。</p>
-<h3 id="1-1-3-海绵城市的提出"><a href="#1-1-3-海绵城市的提出" class="headerlink" title="1.1.3 海绵城市的提出"></a>1.1.3 海绵城市的提出</h3><p>&#160; &#160; &#160; &#160;海绵在人们日常生活中应用广泛，但其最令人印象深刻的特性就是其出色的吸水和储水能力。而海绵城市正是这样像海绵一样具有出色的储存水资源和释放水资源的能力。它可以比较好的适应自然条件的变化，挺高面对自然灾害的能力。海绵城市在下雨时可以吸收容纳水，在缺水时释放储存的水资源。</p>
-<blockquote>
-<p>海绵城市将自然环境和人为措施相结合起来，可以在最大限度地保证城市排水能力和水涝安全的前提下，对城市雨水渗透净化，促进雨水资源的利用率并且可以良性的循环利用水资源[34]。</p>
-</blockquote>
-<p>既能够解决严重涝灾所引起的城市管网瞬时过载问题;又能够有效提高雨水资源的利用率和缓解因缺乏水资源导致的城市缺水问题。<br>&#160; &#160; &#160; &#160;通过比较海绵城市和传统处理雨水模式，可以看到二者的差异是显而易见的。传统的城市建设模式主要依靠管道，抽水站等设备排水。主要的规划设计理念是“排水”和“束水”。这种传统的管理模式没有考虑到自然环境在城市排水系统中的巨大作用。所以往往每一次下雨，就出来内涝现象，而且费力的修建雨水管道也不见特别好的成效。 而“海绵城市”正是针对传统城市雨水处理模式所造成的水资源流失，排水系统瞬时过载，涝灾，旱灾和洪水频发等问题提出的新型暴雨洪水管理模式。</p>
-<blockquote>
-<p>海绵城市以“缓释”和“源头分散”为主要规划设计理念，尽可能的利用草地，雨水花园，下沉绿地等“绿色”措施，降伏滞留在地表的降水。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;海绵城市与低影响开发模式（LID）是城乡规划领域的研究热点，开展相关研究可以解决城市暴雨洪水管理问题。本文以成都理工大学区域为研究区域，基于暴雨洪水管理模型（SWMM）平台，对重现期为2、5、10、20年，为期1小时的降水，进行了SWMM建模分析。
-    
-    </summary>
-    
-    
-      <category term="学习" scheme="https://wcnvidia.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="swmm" scheme="https://wcnvidia.github.io/tags/swmm/"/>
     
   </entry>
   
