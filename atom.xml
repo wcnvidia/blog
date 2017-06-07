@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wcnvidia.github.io/"/>
-  <updated>2017-06-07T09:21:06.000Z</updated>
+  <updated>2017-06-07T10:11:30.000Z</updated>
   <id>https://wcnvidia.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://wcnvidia.github.io/2017/06/07/SWMM%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/"/>
     <id>https://wcnvidia.github.io/2017/06/07/SWMM简易教程/</id>
     <published>2017-06-07T09:10:59.000Z</published>
-    <updated>2017-06-07T09:21:06.000Z</updated>
+    <updated>2017-06-07T10:11:30.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="SWMM简易教程"><a href="#SWMM简易教程" class="headerlink" title="SWMM简易教程"></a>SWMM简易教程</h1><h2 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1 软件准备"></a>1 软件准备</h2><p>EPA SWMM是一个开源软件，<a href="https://www.epa.gov/water-research/storm-water-management-model-swmm" target="_blank" rel="external">在官方网站</a>可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。</p>
+    <content type="html"><![CDATA[<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1 软件准备"></a>1 软件准备</h1><p>EPA SWMM是一个开源软件，<a href="https://www.epa.gov/water-research/storm-water-management-model-swmm" target="_blank" rel="external">在官方网站</a>可以下载到SWMM最新的发行版本，以及配套操作手册。点击图1-1网页上的Downloads可以定位到下载位置。</p>
 <blockquote>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -43,7 +43,7 @@
             </figure>
 </blockquote>
 <p>如果觉得这样探索网页太麻烦，也可以<a href="https://www.epa.gov/sites/production/files/2017-03/swmm51012_setup_2.exe" target="_blank" rel="external">点击这里</a>直接下载。</p>
-<h2 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2 使用方法"></a>2 使用方法</h2><h3 id="2-1-操作界面简介"><a href="#2-1-操作界面简介" class="headerlink" title="2.1 操作界面简介"></a>2.1 操作界面简介</h3><p>打开软件，默认的界面如图2-1所示，分为6个部分，我用红、橙、绿、蓝、黑、灰六个颜色的方框标记了这六个部分。其中：</p>
+<h1 id="2-使用方法"><a href="#2-使用方法" class="headerlink" title="2 使用方法"></a>2 使用方法</h1><h2 id="2-1-操作界面简介"><a href="#2-1-操作界面简介" class="headerlink" title="2.1 操作界面简介"></a>2.1 操作界面简介</h2><p>打开软件，默认的界面如图2-1所示，分为6个部分，我用红、橙、绿、蓝、黑、灰六个颜色的方框标记了这六个部分。其中：</p>
 <ul>
 <li>红色：红色方框代表软件的菜单栏，软件中大部分功能都能在菜单栏里面找到。</li>
 <li>橙色：橙色方框代表软件的快捷操作栏，打开文件、打印图形、模型运算、查看数据等功能均可快速在此栏实现。</li>
@@ -61,8 +61,8 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="2-2-最简模型构建"><a href="#2-2-最简模型构建" class="headerlink" title="2.2 最简模型构建"></a>2.2 最简模型构建</h3><p>模型的最简构建，仅仅需要设置雨量计（Rain Gages）、时间序列（Time Series）、子汇水区（Subcatchments）、铰点（Junctions）、排放口（Outfalls）、管道（Conduits）即可实现，下面我将构建一个最简模型。</p>
-<h4 id="2-2-1-设置子汇水区"><a href="#2-2-1-设置子汇水区" class="headerlink" title="2.2.1 设置子汇水区"></a>2.2.1 设置子汇水区</h4><p>操作步骤：</p>
+<h2 id="2-2-最简模型构建"><a href="#2-2-最简模型构建" class="headerlink" title="2.2 最简模型构建"></a>2.2 最简模型构建</h2><p>模型的最简构建，仅仅需要设置雨量计（Rain Gages）、时间序列（Time Series）、子汇水区（Subcatchments）、铰点（Junctions）、排放口（Outfalls）、管道（Conduits）即可实现，下面我将构建一个最简模型。</p>
+<h3 id="2-2-1-设置子汇水区"><a href="#2-2-1-设置子汇水区" class="headerlink" title="2.2.1 设置子汇水区"></a>2.2.1 设置子汇水区</h3><p>操作步骤：</p>
 <ol>
 <li><p>找到软件左侧数据栏，点击Hydrology（水文）模块。(图2-2)</p>
 <blockquote>
@@ -110,7 +110,7 @@
 </li>
 </ol>
 <p>SWMM软件整体操作逻辑非常接近，因此后续的步骤中，我将不会这样一步一步的截图。</p>
-<h4 id="2-2-2-设置铰点"><a href="#2-2-2-设置铰点" class="headerlink" title="2.2.2 设置铰点"></a>2.2.2 设置铰点</h4><p>操作步骤：</p>
+<h3 id="2-2-2-设置铰点"><a href="#2-2-2-设置铰点" class="headerlink" title="2.2.2 设置铰点"></a>2.2.2 设置铰点</h3><p>操作步骤：</p>
 <ol>
 <li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Nodes。</li>
 <li>点击Junctions，找到并点击数据栏底部”+”按钮。</li>
@@ -126,11 +126,11 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="2-2-3-设置排放口"><a href="#2-2-3-设置排放口" class="headerlink" title="2.2.3 设置排放口"></a>2.2.3 设置排放口</h4><p>操作步骤：</p>
+<h3 id="2-2-3-设置排放口"><a href="#2-2-3-设置排放口" class="headerlink" title="2.2.3 设置排放口"></a>2.2.3 设置排放口</h3><p>操作步骤：</p>
 <ol>
 <li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Nodes。</li>
 <li>点击Outfalls，找到并点击数据栏底部”+”按钮。</li>
-<li>在右侧可视化窗口中任意位置点击一下即可生成一个名为”3”的排放口。<h4 id="2-2-4-设置管道"><a href="#2-2-4-设置管道" class="headerlink" title="2.2.4 设置管道"></a>2.2.4 设置管道</h4>操作步骤：</li>
+<li>在右侧可视化窗口中任意位置点击一下即可生成一个名为”3”的排放口。<h3 id="2-2-4-设置管道"><a href="#2-2-4-设置管道" class="headerlink" title="2.2.4 设置管道"></a>2.2.4 设置管道</h3>操作步骤：</li>
 <li>找到软件左侧数据栏，点击Hydraulics（水力）模块，点击Links。</li>
 <li>点击Conduits，找到并点击数据栏底部”+”按钮。</li>
 <li>在右侧可视化窗口中连接铰点”2”和排放口”3”（务必先点铰链再点排放口，这个顺序关系到哪个点是入水口，哪个点是出水口，先点的为入水口，后点的为出水口，如果之后要改变管道的入水口和出水口，可以在管道”1”的属性设置中设置Inlet Node和Outlet Node），即可生成管道”1”。（图2-7）<blockquote>
@@ -144,12 +144,12 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="2-2-5-设置雨量计"><a href="#2-2-5-设置雨量计" class="headerlink" title="2.2.5 设置雨量计"></a>2.2.5 设置雨量计</h4><p>操作步骤：</p>
+<h3 id="2-2-5-设置雨量计"><a href="#2-2-5-设置雨量计" class="headerlink" title="2.2.5 设置雨量计"></a>2.2.5 设置雨量计</h3><p>操作步骤：</p>
 <ol>
 <li>找到软件左侧数据栏，点击Hydrology（水文）模块。</li>
 <li>点击Rain Gages，找到并点击数据栏底部”+”按钮。</li>
 <li>在右侧可视化窗口中随意绘制一个图形（形状、大小任意都可），默认生成一个名为”1”的雨量计。</li>
-<li>找到软件左下编辑栏的”1”→双击”1”，就可打开名为”1”的雨量计的属性设置，这里暂时先不设置雨量计属性。<h4 id="2-2-6-添加时间序列"><a href="#2-2-6-添加时间序列" class="headerlink" title="2.2.6 添加时间序列"></a>2.2.6 添加时间序列</h4>操作步骤：</li>
+<li>找到软件左下编辑栏的”1”→双击”1”，就可打开名为”1”的雨量计的属性设置，这里暂时先不设置雨量计属性。<h3 id="2-2-6-添加时间序列"><a href="#2-2-6-添加时间序列" class="headerlink" title="2.2.6 添加时间序列"></a>2.2.6 添加时间序列</h3>操作步骤：</li>
 <li>找到软件左侧数据栏，点击Time Series。</li>
 <li>找到并点击数据栏底部”+”按钮。</li>
 <li>在打开的时间序列编辑器里Time Series Name栏输入任意名称，比如”S1”。Description可以不描述。</li>
@@ -187,7 +187,7 @@
 </blockquote>
 </li>
 </ol>
-<h3 id="2-3-模型运行及结果查看"><a href="#2-3-模型运行及结果查看" class="headerlink" title="2.3 模型运行及结果查看"></a>2.3 模型运行及结果查看</h3><h4 id="2-3-1-模型运行"><a href="#2-3-1-模型运行" class="headerlink" title="2.3.1 模型运行"></a>2.3.1 模型运行</h4><p>点击如图2-11中的类似闪电一样的按钮，之后弹出一个窗口点击OK。</p>
+<h2 id="2-3-模型运行及结果查看"><a href="#2-3-模型运行及结果查看" class="headerlink" title="2.3 模型运行及结果查看"></a>2.3 模型运行及结果查看</h2><h3 id="2-3-1-模型运行"><a href="#2-3-1-模型运行" class="headerlink" title="2.3.1 模型运行"></a>2.3.1 模型运行</h3><p>点击如图2-11中的类似闪电一样的按钮，之后弹出一个窗口点击OK。</p>
 <blockquote>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -197,7 +197,7 @@
                 <div class="image-caption">图2-11</div>
             </figure>
 </blockquote>
-<h4 id="2-3-2-模型结果查看"><a href="#2-3-2-模型结果查看" class="headerlink" title="2.3.2 模型结果查看"></a>2.3.2 模型结果查看</h4><p>本文以查看铰点”2”总流量为例，介绍查看模拟结果的方法。</p>
+<h3 id="2-3-2-模型结果查看"><a href="#2-3-2-模型结果查看" class="headerlink" title="2.3.2 模型结果查看"></a>2.3.2 模型结果查看</h3><p>本文以查看铰点”2”总流量为例，介绍查看模拟结果的方法。</p>
 <ol>
 <li>点击图上的铰点”2”。</li>
 <li><p>点击快捷菜单栏的Create a time series按钮。（图2-12）</p>
@@ -237,17 +237,17 @@
 </li>
 </ol>
 <p>至此最简单的软件使用方法介绍完毕。</p>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="A-SWMM汉化版及中文使用手册"><a href="#A-SWMM汉化版及中文使用手册" class="headerlink" title="A SWMM汉化版及中文使用手册"></a>A SWMM汉化版及中文使用手册</h3><p>SWMM汉化版相比SWMM原版，版本更老（还处于5.0版本），算法和最新版本不同，并且LID控制单元要比官方版本更少。但是对于学习SWMM软件的使用是非常友好的。</p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="A-SWMM汉化版及中文使用手册"><a href="#A-SWMM汉化版及中文使用手册" class="headerlink" title="A SWMM汉化版及中文使用手册"></a>A SWMM汉化版及中文使用手册</h2><p>SWMM汉化版相比SWMM原版，版本更老（还处于5.0版本），算法和最新版本不同，并且LID控制单元要比官方版本更少。但是对于学习SWMM软件的使用是非常友好的。</p>
 <p><a href="https://pan.baidu.com/s/1geXw0vh" target="_blank" rel="external">点击这里下载</a>，提取密码zr84。</p>
-<h3 id="B-芝加哥雨型生成器"><a href="#B-芝加哥雨型生成器" class="headerlink" title="B 芝加哥雨型生成器"></a>B 芝加哥雨型生成器</h3><p>对于没有具体实际降水情景的情况，我们需要模拟降水。使用芝加哥雨型生成器和当地的暴雨公式，能够降雨数据，把数据录入SWMM模型和EXCEL就能做降雨分析。</p>
+<h2 id="B-芝加哥雨型生成器"><a href="#B-芝加哥雨型生成器" class="headerlink" title="B 芝加哥雨型生成器"></a>B 芝加哥雨型生成器</h2><p>对于没有具体实际降水情景的情况，我们需要模拟降水。使用芝加哥雨型生成器和当地的暴雨公式，能够降雨数据，把数据录入SWMM模型和EXCEL就能做降雨分析。</p>
 <p><a href="https://pan.baidu.com/s/1pKOsCQJ" target="_blank" rel="external">点击这里下载</a>，提取密码akiv。</p>
-<h3 id="C-我自己建的模型"><a href="#C-我自己建的模型" class="headerlink" title="C 我自己建的模型"></a>C 我自己建的模型</h3><p>为了写毕业论文，我给成都理工大学进行了SWMM建模，这里分享出来，大家可以下载。<br>使用方法：菜单栏File→Open→找到SWMM.INP即可。</p>
+<h2 id="C-我自己建的模型"><a href="#C-我自己建的模型" class="headerlink" title="C 我自己建的模型"></a>C 我自己建的模型</h2><p>为了写毕业论文，我给成都理工大学进行了SWMM建模，这里分享出来，大家可以下载。<br>使用方法：菜单栏File→Open→找到SWMM.INP即可。</p>
 <p><a href="https://pan.baidu.com/s/1dFrdpLJ" target="_blank" rel="external">点击这里下载</a>，提取密码ds5w。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;SWMM简易教程&quot;&gt;&lt;a href=&quot;#SWMM简易教程&quot; class=&quot;headerlink&quot; title=&quot;SWMM简易教程&quot;&gt;&lt;/a&gt;SWMM简易教程&lt;/h1&gt;&lt;h2 id=&quot;1-软件准备&quot;&gt;&lt;a href=&quot;#1-软件准备&quot; class=&quot;headerli
+      &lt;h1 id=&quot;1-软件准备&quot;&gt;&lt;a href=&quot;#1-软件准备&quot; class=&quot;headerlink&quot; title=&quot;1 软件准备&quot;&gt;&lt;/a&gt;1 软件准备&lt;/h1&gt;&lt;p&gt;EPA SWMM是一个开源软件，&lt;a href=&quot;https://www.epa.gov/water-res
     
     </summary>
     
